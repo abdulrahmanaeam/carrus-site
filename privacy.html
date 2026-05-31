@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Carrus</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #FAFAFA; color: #0F172A;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, Segoe UI, system-ui, sans-serif; line-height: 1.65; }
+    main { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+    h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 12px; }
+    h2 { font-size: 22px; font-weight: 700; margin: 40px 0 12px; }
+    p, li { font-size: 17px; color: #1F2937; }
+    p { margin: 0 0 16px; }
+    ul { padding-left: 24px; margin: 0 0 16px; }
+    li { margin-bottom: 6px; }
+    strong { color: #0F172A; }
+    a { color: #146EF5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: #6B7280; font-size: 15px; margin-bottom: 32px; }
+    .nav { font-size: 14px; color: #6B7280; margin-bottom: 40px; }
+    .nav a { color: #6B7280; margin-right: 16px; }
+    hr { border: none; border-top: 1px solid #E5E7EB; margin: 48px 0 24px; }
+    .footer-note { font-size: 14px; color: #6B7280; font-style: italic; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="nav">
+      <a href="/">← Carrus</a>
+      <a href="/terms">Terms</a>
+    </div>
+
+    <h1>Privacy Policy</h1>
+    <p class="meta"><strong>Effective:</strong> [DATE]<br><strong>Last updated:</strong> [DATE]</p>
+
+    <p>This Privacy Policy describes how Carrus ("we", "our", "the app") handles your information when you use our mobile application.</p>
+    <p>Carrus is operated by Plenu Studio, reachable at <a href="mailto:hello@carrus.app">hello@carrus.app</a>.</p>
+
+    <h2>1. What we collect</h2>
+    <p>We collect the minimum information needed to run the service.</p>
+    <p><strong>Account data</strong> (only if you sign in):</p>
+    <ul>
+      <li>Email address (used to identify your account and send password reset links).</li>
+      <li>Authentication tokens (managed by our auth provider, Supabase).</li>
+    </ul>
+    <p><strong>Your vehicle data:</strong></p>
+    <ul>
+      <li>Vehicle information you enter: make, model, year, nickname, color, body type, mileage, in-service date.</li>
+      <li>Maintenance records you create: service date, mileage, cost, notes, scanned receipts.</li>
+      <li>Maintenance preferences: notification settings, units (miles/km), region, theme.</li>
+    </ul>
+    <p><strong>Purchase data</strong> (only if you subscribe): handled by RevenueCat. Apple/Google retain payment details; we never see your card number.</p>
+    <p><strong>Diagnostic data</strong> (anonymous): crash reports and error events sent to Sentry. We attach your anonymous user ID only — never your email or personal data.</p>
+    <p><strong>Usage analytics</strong> (anonymous): anonymous interaction events sent to PostHog (which screens you visit, which features you use). No personal data; helps us improve the app.</p>
+    <p><strong>AI features:</strong> when you chat with Carson or scan a receipt, your message text or receipt image is sent to OpenAI to generate a response. OpenAI does not retain this data for training. We do not store these messages on our servers beyond the duration of the request.</p>
+
+    <h2>2. What we do NOT collect</h2>
+    <ul>
+      <li>We do not collect your name, phone number, address, or precise location.</li>
+      <li>We do not sell your data to anyone.</li>
+      <li>We do not share your data with advertising networks.</li>
+      <li>We do not access your phone's contacts, photos (other than ones you explicitly select for receipt scanning), microphone, or location.</li>
+    </ul>
+
+    <h2>3. Where your data is stored</h2>
+    <ul>
+      <li><strong>Account + vehicle + maintenance data:</strong> stored in Supabase (United States data centers).</li>
+      <li><strong>Vehicle + maintenance data while offline:</strong> stored locally on your device using encrypted system storage.</li>
+      <li><strong>Crash reports:</strong> Sentry (United States).</li>
+      <li><strong>Usage analytics:</strong> PostHog (European Union — Frankfurt).</li>
+      <li><strong>Subscription state:</strong> RevenueCat (United States) and Apple/Google.</li>
+    </ul>
+    <p>If you are in the European Economic Area (EEA) or United Kingdom, your data may be transferred to the United States; these transfers are protected by the relevant standard contractual clauses.</p>
+
+    <h2>4. Your rights</h2>
+    <p>Under data protection laws (including GDPR if you're in the EU, and CCPA if you're in California), you have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> the data we hold about you. Use the in-app <strong>"Download My Data"</strong> button (Settings → Manage Account) to export a JSON file containing all your data.</li>
+      <li><strong>Delete</strong> your account and all associated data. Use the in-app <strong>"Delete Account"</strong> button (Settings → Manage Account). This is permanent and immediate; cancelled accounts are removed from our database within 24 hours.</li>
+      <li><strong>Correct</strong> inaccurate data by editing it directly in the app.</li>
+      <li><strong>Withdraw consent</strong> by signing out and uninstalling the app. Your locally-stored data remains on the device until you uninstall.</li>
+    </ul>
+    <p>To exercise any other right, email us at <a href="mailto:hello@carrus.app">hello@carrus.app</a>.</p>
+
+    <h2>5. Children</h2>
+    <p>Carrus is not intended for use by anyone under 13 (or 16 in the EU/UK). We do not knowingly collect data from children. If you believe we've inadvertently collected data from a child, contact us and we'll delete it.</p>
+
+    <h2>6. Cookies + tracking</h2>
+    <p>Carrus is a mobile app and does not use browser cookies. We don't use any cross-app tracking identifiers (IDFA on iOS, GAID on Android) for advertising.</p>
+
+    <h2>7. Data retention</h2>
+    <ul>
+      <li><strong>Account data:</strong> kept while your account is active. Deleted within 24 hours of account deletion.</li>
+      <li><strong>Anonymous analytics + crash reports:</strong> retained for up to 90 days, then automatically deleted.</li>
+      <li><strong>AI chat + receipt scans:</strong> processed in real time, not retained on our servers.</li>
+    </ul>
+
+    <h2>8. Security</h2>
+    <ul>
+      <li>All data in transit is encrypted using TLS.</li>
+      <li>Server-side databases use industry-standard encryption at rest.</li>
+      <li>We follow least-privilege access principles for our own staff.</li>
+    </ul>
+    <p>No system is perfectly secure. If you believe your account has been compromised, contact us at <a href="mailto:hello@carrus.app">hello@carrus.app</a> immediately.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>If we change how we handle data in a material way, we'll update this page and notify active users via an in-app notice at least 30 days before the change takes effect.</p>
+
+    <h2>10. Contact</h2>
+    <p>Questions, requests, or complaints: <a href="mailto:hello@carrus.app">hello@carrus.app</a></p>
+    <p>If you're in the EU/UK and you believe we're not handling your data correctly, you also have the right to lodge a complaint with your local data protection authority.</p>
+
+    <hr>
+    <p class="footer-note">Carrus is an independent app and is not affiliated with or endorsed by any vehicle manufacturer.</p>
+  </main>
+</body>
+</html>
