@@ -33,7 +33,7 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="meta"><strong>Effective:</strong> June 5, 2026<br><strong>Last updated:</strong> June 15, 2026</p>
+    <p class="meta"><strong>Effective:</strong> June 5, 2026<br><strong>Last updated:</strong> July 29, 2026</p>
 
     <p>This Privacy Policy describes how Carrus ("we", "our", "the app") handles your information when you use our mobile application.</p>
     <p>Carrus is operated by <strong>Abdulrahman Ahmed Mohamed</strong>, reachable at <a href="mailto:hello@carrus.app">hello@carrus.app</a>.</p>
@@ -47,26 +47,36 @@
     </ul>
     <p><strong>Your vehicle data:</strong></p>
     <ul>
-      <li>Vehicle information you enter: make, model, year, nickname, color, body type, mileage, in-service date.</li>
+      <li>Vehicle information you enter: make, model, year, nickname, color, vehicle type (car or motorbike), body type, mileage, in-service date.</li>
       <li>Maintenance records you create: service date, mileage, cost, notes, scanned receipts.</li>
-      <li>Maintenance preferences: notification settings, units (miles/km), region, theme.</li>
+      <li>Fuel records you create: fill-up date, volume, cost, and your current tank level.</li>
+      <li>Maintenance preferences: notification settings, units (miles/km), region, display currency, theme.</li>
+    </ul>
+    <p><strong>Glovebox documents:</strong></p>
+    <ul>
+      <li>If you use the Glovebox, we store the document's <strong>type</strong> (registration, insurance, licence or other), the <strong>title you give it</strong>, and its <strong>expiry date</strong> in your account so reminders work across your devices.</li>
+      <li>The <strong>photographs themselves stay on your phone.</strong> They are never uploaded to Carrus and never sent to any third party. They are kept in your app's own storage, which means they are included in your device backup (for example iCloud), and they are deleted when you delete the document, the vehicle, or the app.</li>
     </ul>
     <p><strong>Purchase data</strong> (only if you subscribe): handled by RevenueCat. Apple/Google retain payment details; we never see your card number.</p>
-    <p><strong>Diagnostic data</strong> (anonymous): crash reports and error events sent to Sentry. We attach your anonymous user ID only — never your email or personal data.</p>
-    <p><strong>Usage analytics:</strong> interaction events sent to PostHog (which screens you visit, which features you use), associated with your account identifier and email address so we can analyze product usage and improve the app. We never send your vehicle data, maintenance records, or payment details to analytics.</p>
-    <p><strong>AI features:</strong> when you chat with Carson or scan a receipt, your message text or receipt image is sent to OpenAI to generate a response. OpenAI does not retain this data for training. We do not store these messages on our servers beyond the duration of the request.</p>
+    <p><strong>Subscription state:</strong> we keep our own record of your plan (tier, status and expiry date) so that paid features work offline. Payment details are never visible to us.</p>
+    <p><strong>Diagnostic data:</strong> crash reports and error events sent to Sentry, tagged with your account ID so we can tell whether one user hit an error repeatedly. Never your email.</p>
+    <p><strong>Usage analytics</strong> (pseudonymous): interaction events sent to PostHog (which screens you visit, which features you use), linked to your account ID and your subscription tier. Not your email or name, but not anonymous either — the events for one account can be viewed together.</p>
+    <p><strong>AI features:</strong> when you chat with Carson or scan a receipt, your message text or receipt image is sent to OpenAI to generate a response. OpenAI does not retain this data for training, and we do not store the message content on our servers. We do keep a usage counter — which feature you used and when, with no content — so we can enforce plan limits.</p>
 
     <h2>2. What we do NOT collect</h2>
     <ul>
       <li>We do not collect your name, phone number, address, or precise location.</li>
       <li>We do not sell your data to anyone.</li>
       <li>We do not share your data with advertising networks.</li>
-      <li>We do not access your phone's contacts, photos (other than ones you explicitly select for receipt scanning), microphone, or location.</li>
+      <li>We do not access your phone's contacts, microphone, or location.</li>
+      <li>We do not access your photo library except for images you explicitly pick yourself — a receipt to scan, or a Glovebox document. We use the camera only when you choose to photograph a receipt or a Glovebox document.</li>
+      <li>We do not upload your Glovebox document photographs. They stay on your device.</li>
     </ul>
 
     <h2>3. Where your data is stored</h2>
     <ul>
-      <li><strong>Account + vehicle + maintenance data:</strong> stored in Supabase (United States data centers).</li>
+      <li><strong>Account + vehicle + maintenance + fuel data, and Glovebox document details (type, title, expiry):</strong> stored in Supabase (United States data centers).</li>
+      <li><strong>Glovebox document photographs:</strong> your device only — never uploaded.</li>
       <li><strong>Vehicle + maintenance data while offline:</strong> stored locally on your device using encrypted system storage.</li>
       <li><strong>Crash reports:</strong> Sentry (United States).</li>
       <li><strong>Usage analytics:</strong> PostHog (European Union — Frankfurt).</li>
@@ -78,7 +88,7 @@
     <p>Under data protection laws (including GDPR if you're in the EU, and CCPA if you're in California), you have the right to:</p>
     <ul>
       <li><strong>Access</strong> the data we hold about you. Use the in-app <strong>"Download My Data"</strong> button (Settings → Manage Account) to export a JSON file containing all your data.</li>
-      <li><strong>Delete</strong> your account and all associated data. Use the in-app <strong>"Delete Account"</strong> button (Settings → Manage Account). This is permanent and immediate; cancelled accounts are removed from our database within 24 hours.</li>
+      <li><strong>Delete</strong> your account and all associated data. Use the in-app <strong>"Delete Account"</strong> button (Settings → Manage Account). This is permanent and immediate; deleted accounts are removed from our database within 24 hours. Records held by our processors — your purchase history at RevenueCat and Apple/Google, and analytics events at PostHog — are not removed by this button; email us at <strong>hello@carrus.app</strong> and we will erase them on request.</li>
       <li><strong>Correct</strong> inaccurate data by editing it directly in the app.</li>
       <li><strong>Withdraw consent</strong> by signing out and uninstalling the app. Your locally-stored data remains on the device until you uninstall.</li>
     </ul>
@@ -93,8 +103,9 @@
     <h2>7. Data retention</h2>
     <ul>
       <li><strong>Account data:</strong> kept while your account is active. Deleted within 24 hours of account deletion.</li>
-      <li><strong>Analytics + crash reports:</strong> retained for up to 90 days, then automatically deleted.</li>
-      <li><strong>AI chat + receipt scans:</strong> processed in real time, not retained on our servers.</li>
+      <li><strong>Analytics + crash reports:</strong> retained by our providers under their own retention settings, currently up to 90 days for event data.</li>
+      <li><strong>AI chat + receipt scans:</strong> the message text and images are processed in real time and are not retained on our servers.</li>
+      <li><strong>AI usage counters:</strong> the record of which AI feature you used and when (never the content) is kept while your account is active, and is deleted with your account.</li>
     </ul>
 
     <h2>8. Security</h2>
