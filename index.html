@@ -77,40 +77,17 @@
     .tag-estimate { font: 600 11px/1 Inter, system-ui; letter-spacing: .04em; text-transform: uppercase; color: #64748B; border: 1px dashed #94A3B8; padding: 5px 10px; border-radius: 99px; flex: none; }
     .proof { background: #F1F2F6; border-radius: 16px; padding: 20px; }
     .proof-k { font: 600 11px/1 ui-monospace, Menlo, monospace; color: #64748B; letter-spacing: .05em; margin-bottom: 14px; }
-    .proof-row { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 14px; display: flex; align-items: center; gap: 12px; }
-    .proof-ic { width: 24px; height: 24px; border-radius: 12px; border: 2px solid #EF4444; flex: none; position: relative; }
-    .proof-ic i { position: absolute; left: 50%; top: 50%; width: 2px; height: 8px; background: #EF4444; transform: translate(-50%,-50%); border-radius: 1px; display: block; }
-    .proof-t { font: 800 16px/24px Inter, system-ui; }
-    .proof-s { font: 500 13px/18px Inter, system-ui; color: #64748B; }
-    .pill-red { font: 600 10px/13px Inter, system-ui; letter-spacing: .03em; text-transform: uppercase; color: #B91C1C; background: rgba(239,68,68,.12); padding: 4px 8px; border-radius: 99px; }
+    .proof-img { display: block; width: 100%; height: auto; border-radius: 12px; }
 
     /* features */
     .features h2, .features .lede { max-width: 560px; }
     .feat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 44px; }
-    .feat-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 20px; }
+    .feat-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 20px; }
     .feat-t { font: 800 20px/28px Inter, system-ui; letter-spacing: -.01em; }
     .feat-s { font: 400 15px/23px Inter, system-ui; color: #64748B; text-wrap: pretty; }
-    .big-ring { width: 76px; height: 76px; border-radius: 38px; flex: none; background: conic-gradient(#F59E0B 0turn .68turn, #E5E7EB .68turn 1turn); display: flex; align-items: center; justify-content: center; }
-    .big-ring-in { width: 60px; height: 60px; border-radius: 30px; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-    .big-ring-in .n { font: 800 20px/24px Inter, system-ui; color: #A2530A; }
-    .big-ring-in .k { font: 600 9px/12px Inter, system-ui; letter-spacing: .06em; text-transform: uppercase; color: #64748B; }
-    .stat-pills { display: flex; flex-direction: column; gap: 6px; }
-    .sp { font: 600 10px/13px Inter, system-ui; letter-spacing: .03em; text-transform: uppercase; padding: 4px 8px; border-radius: 99px; align-self: flex-start; }
-    .sp-red { color: #B91C1C; background: rgba(239,68,68,.12); }
-    .sp-amber { color: #A2530A; background: rgba(245,158,11,.16); }
-    .spend-k { font: 600 10px/13px Inter, system-ui; letter-spacing: .06em; text-transform: uppercase; color: #64748B; }
-    .spend-v { font: 800 30px/38px Inter, system-ui; letter-spacing: -.02em; }
-    .bars { display: flex; align-items: flex-end; gap: 6px; height: 64px; margin-top: 12px; }
-    .bars i { flex: 1; background: #146EF5; border-radius: 3px; opacity: .3; display: block; }
-    .bars i:last-child { opacity: 1; }
-    .gauge-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; }
-    .gauge-head .k { font: 600 10px/13px Inter, system-ui; letter-spacing: .06em; text-transform: uppercase; color: #64748B; }
-    .gauge-head .v { font: 800 24px/28px Inter, system-ui; }
-    .gauge { height: 44px; border-radius: 16px; background: #F1F2F6; border: 1px solid #E5E7EB; position: relative; overflow: hidden; }
-    .gauge .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 62%; background: rgba(20,110,245,.16); }
-    .gauge .needle { position: absolute; left: 62%; top: 6px; bottom: 6px; width: 4px; border-radius: 2px; background: #146EF5; }
-    .gauge .ef { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font: 600 10px/13px ui-monospace, Menlo, monospace; color: #64748B; }
-    .gauge-note { font: 500 13px/18px Inter, system-ui; color: #64748B; margin-top: 10px; }
+    /* Real app UI, cropped from the shipping build — not illustrations. */
+    .feat-img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid #E5E7EB; background: #F1F2F6; }
+    .feat-text { margin-top: auto; }
 
     /* carson */
     .carson { background: #0A1B33; }
@@ -264,14 +241,7 @@
         </div>
         <div class="proof">
           <div class="proof-k">AS IT APPEARS ON THE ROW</div>
-          <div class="proof-row">
-            <div class="proof-ic"><i></i></div>
-            <div style="flex:1">
-              <div class="proof-t">Oil &amp; filter</div>
-              <div class="proof-s">Manufacturer schedule · every 7,500 mi</div>
-            </div>
-            <span class="pill-red">Overdue</span>
-          </div>
+          <img class="proof-img" src="/assets/feat/proof-row.png" alt="A maintenance row in the app: Oil Change, due in 271 miles or 32 days, labeled General estimate" loading="lazy" width="700" height="216">
         </div>
       </div>
     </div>
@@ -284,35 +254,24 @@
     <p class="lede">Health, fuel, what's late and what it cost — no dashboards to assemble.</p>
     <div class="feat-grid">
       <div class="feat-card">
-        <div style="display:flex;align-items:center;gap:16px">
-          <div class="big-ring"><div class="big-ring-in"><span class="n">68</span><span class="k">Health</span></div></div>
-          <div class="stat-pills"><span class="sp sp-red">1 overdue</span><span class="sp sp-amber">2 due soon</span></div>
-        </div>
-        <div>
+        <img class="feat-img" src="/assets/feat/health.png" alt="Maintenance overview in the app: a 75% maintenance-health ring beside 47 tracked tasks" loading="lazy" width="700" height="320">
+        <div class="feat-text">
           <div class="feat-t">Health at a glance</div>
-          <div class="feat-s">One ring per vehicle, weighted by how overdue each task is. Amber before it's red.</div>
+          <div class="feat-s">One number for the whole garage, weighted by how overdue each task is — and the queue that explains it.</div>
         </div>
       </div>
       <div class="feat-card">
-        <div>
-          <div class="spend-k">Spending · 12 mo</div>
-          <div class="spend-v">$1,486.20</div>
-          <div class="bars"><i style="height:38%"></i><i style="height:62%"></i><i style="height:24%"></i><i style="height:88%"></i><i style="height:46%"></i><i style="height:70%"></i></div>
-        </div>
-        <div>
-          <div class="feat-t">Fuel, MPG and cost</div>
-          <div class="feat-s">Log a fill-up in four taps. Carrus does the math and remembers the shop.</div>
+        <img class="feat-img" src="/assets/feat/costs.png" alt="Costs sheet in the app: twelve-month bar chart of service and fuel spending" loading="lazy" width="700" height="342">
+        <div class="feat-text">
+          <div class="feat-t">What it really costs</div>
+          <div class="feat-s">Service and fuel month by month, plus cost per mile worked out from your own mileage updates.</div>
         </div>
       </div>
       <div class="feat-card">
-        <div>
-          <div class="gauge-head"><span class="k">Fuel level</span><span class="v">62%</span></div>
-          <div class="gauge"><div class="fill"></div><div class="needle"></div><div class="ef"><span>E</span><span>F</span></div></div>
-          <div class="gauge-note">Drag to set · 257 mi est. range</div>
-        </div>
-        <div>
+        <img class="feat-img" src="/assets/feat/fuel.png" alt="Fuel gauge card in the app: draggable arc gauge showing 11.6 gallons and 350 miles estimated range" loading="lazy" width="700" height="355">
+        <div class="feat-text">
           <div class="feat-t">A gauge you can drag</div>
-          <div class="feat-s">No typing. Set the needle where your dash says it is and get a range estimate.</div>
+          <div class="feat-s">No typing. Set the needle where your dash says it is, and Carrus estimates the range left.</div>
         </div>
       </div>
     </div>
