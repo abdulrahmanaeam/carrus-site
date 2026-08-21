@@ -36,8 +36,8 @@
 
     /* ── hero ── */
     .hero { background: #146EF5; position: relative; }
-    .hero-in { padding-top: 88px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: end; }
-    .hero-copy { padding-bottom: 96px; align-self: center; }
+    .hero-in { padding-top: 80px; padding-bottom: 80px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+    .hero-copy { align-self: center; }
     .hero-badge { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border-radius: 15px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.24); margin-bottom: 26px; }
     .hero-badge .dot { width: 6px; height: 6px; border-radius: 3px; background: #fff; }
     .hero-badge span { font: 600 12px/1 Inter, system-ui; color: #fff; letter-spacing: .02em; }
@@ -54,8 +54,8 @@
     .hero-note { display: flex; align-items: center; gap: 18px; margin-top: 20px; font: 500 14px/20px Inter, system-ui; color: rgba(255,255,255,.7); }
 
     /* ── phone mockup ── */
-    .hero-phone { display: flex; justify-content: center; align-items: flex-end; height: 700px; overflow: hidden; position: relative; }
-    .hero-device { display: block; width: 336px; height: auto; filter: drop-shadow(0 40px 60px rgba(4,32,80,.4)); }
+    .hero-phone { display: flex; justify-content: center; align-items: center; position: relative; }
+    .hero-device { display: block; width: 336px; height: auto; filter: drop-shadow(0 30px 55px rgba(4,32,80,.38)); }
 
     /* ── sections ── */
     section { scroll-margin-top: 84px; }
@@ -159,11 +159,9 @@
     /* ── responsive ── */
     @media (max-width: 960px) {
       .nav-links > a:not(.nav-cta) { display: none; }
-      .hero-in { grid-template-columns: 1fr; padding-top: 56px; }
+      .hero-in { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 56px; gap: 36px; }
       h1 { font-size: 44px; }
-      .hero-copy { padding-bottom: 12px; }
-      .hero-phone { height: 540px; }
-      .hero-device { width: 256px; }
+      .hero-device { width: 250px; }
       .honesty-grid, .carson-grid { grid-template-columns: 1fr; gap: 40px; }
       h2 { font-size: 34px; }
       .feat-grid { grid-template-columns: 1fr; }
