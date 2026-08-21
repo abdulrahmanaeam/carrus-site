@@ -16,6 +16,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
+    /* In-page nav: ease between sections rather than teleporting. The
+       scroll-margin on sections keeps headings clear of the sticky bar. */
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     body { margin: 0; background: #F1F2F6; font-family: Inter, -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #0F172A; overflow-x: clip; }
     a { color: #146EF5; text-decoration: none; }
     a:hover { color: #0B57C9; }
