@@ -44,9 +44,6 @@
     .hero { background: #146EF5; position: relative; }
     .hero-in { padding-top: 80px; padding-bottom: 80px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
     .hero-copy { align-self: center; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border-radius: 15px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.24); margin-bottom: 26px; }
-    .hero-badge .dot { width: 6px; height: 6px; border-radius: 3px; background: #fff; }
-    .hero-badge span { font: 600 12px/1 Inter, system-ui; color: #fff; letter-spacing: .02em; }
     h1 { margin: 0; font: 800 68px/1.02 Inter, system-ui; letter-spacing: -.035em; color: #fff; text-wrap: balance; }
     .hero-sub { margin: 22px 0 0; max-width: 520px; font: 400 19px/29px Inter, system-ui; color: rgba(255,255,255,.82); text-wrap: pretty; }
     .hero-ctas { display: flex; align-items: center; gap: 14px; margin-top: 34px; flex-wrap: wrap; }
@@ -57,7 +54,10 @@
     .btn-play { height: 56px; padding: 0 26px; border-radius: 28px; border: 1px solid rgba(255,255,255,.38); display: flex; flex-direction: column; justify-content: center; cursor: default; }
     .btn-play .v { font: 700 15px/1 Inter, system-ui; color: #fff; }
     .btn-play .k { font: 500 10px/14px Inter, system-ui; color: rgba(255,255,255,.6); letter-spacing: .06em; text-transform: uppercase; }
-    .hero-note { display: flex; align-items: center; gap: 18px; margin-top: 20px; font: 500 14px/20px Inter, system-ui; color: rgba(255,255,255,.7); }
+    /* Plain facts, dot-separated — deliberately not a badge. */
+    .hero-facts { display: flex; flex-wrap: wrap; align-items: center; margin-top: 24px; font: 500 14px/22px Inter, system-ui; color: rgba(255,255,255,.72); }
+    .hero-facts span { display: inline-flex; align-items: center; }
+    .hero-facts span + span::before { content: ""; width: 3px; height: 3px; border-radius: 2px; background: rgba(255,255,255,.45); margin: 0 12px; flex: none; }
 
     /* ── phone mockup ── */
     .hero-phone { display: flex; justify-content: center; align-items: center; position: relative; }
@@ -196,14 +196,17 @@
 <section class="hero">
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <div class="hero-badge"><div class="dot"></div><span>iOS · English &amp; Español</span></div>
       <h1>Know what your car actually needs.</h1>
       <p class="hero-sub">Real manufacturer schedules where they exist — clearly-labeled estimates where they don't. Carrus never dresses a guess up as a fact.</p>
       <div class="hero-ctas">
         <a class="btn-appstore" href="https://apps.apple.com/app/id6770422802"><span class="k">Download on the</span><span class="v">App Store</span></a>
         <div class="btn-play" title="Android is in testing"><span class="v">Google Play</span><span class="k">Coming soon</span></div>
       </div>
-      <div class="hero-note">Free for one vehicle · no account required</div>
+      <div class="hero-facts">
+        <span>Free for one vehicle</span>
+        <span>No account required</span>
+        <span>English &amp; Español</span>
+      </div>
     </div>
     <div class="hero-phone">
       <img class="hero-device" src="/assets/hero-iphone16pro-v2.png" alt="Carrus garage screen on an iPhone 16 Pro — three vehicles with health rings and fuel levels" width="760" height="1525">
