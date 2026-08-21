@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Carrus — the app that remembers your car</title>
+  <title>Carrus â€” the app that remembers your car</title>
   <meta name="description" content="Oil, brakes, tires, paperwork. Carrus tracks every service by miles and months, scans your receipts, and has Carson, an AI mechanic to ask when something sounds wrong. Free for your first vehicle, on iPhone.">
   <meta name="apple-itunes-app" content="app-id=6770422802">
-  <meta property="og:title" content="Carrus — the app that remembers your car">
-  <meta property="og:description" content="Real manufacturer schedules where they exist — clearly-labeled estimates where they don't. Carrus never dresses a guess up as a fact.">
+  <meta property="og:title" content="Carrus â€” the app that remembers your car">
+  <meta property="og:description" content="Real manufacturer schedules where they exist â€” clearly-labeled estimates where they don't. Carrus never dresses a guess up as a fact.">
   <meta property="og:image" content="https://carrus.app/assets/garage.jpg">
   <meta property="og:url" content="https://carrus.app">
   <link rel="icon" type="image/png" href="/assets/logo.png">
@@ -16,13 +16,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
-    body { margin: 0; background: #F1F2F6; font-family: Inter, -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #0F172A; }
+    body { margin: 0; background: #F1F2F6; font-family: Inter, -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #0F172A; overflow-x: clip; }
     a { color: #146EF5; text-decoration: none; }
     a:hover { color: #0B57C9; }
     ::selection { background: rgba(20,110,245,.18); }
     .wrap { max-width: 1160px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
 
-    /* ── nav ── */
+    /* â”€â”€ nav â”€â”€ */
     .nav { position: sticky; top: 0; z-index: 60; background: rgba(241,242,246,.82); backdrop-filter: blur(18px) saturate(180%); -webkit-backdrop-filter: blur(18px) saturate(180%); border-bottom: 1px solid #E5E7EB; }
     .nav-in { padding-top: 16px; padding-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
     .logo { display: flex; align-items: center; gap: 10px; }
@@ -34,10 +34,10 @@
     .nav-cta { height: 40px; padding: 0 18px; border-radius: 20px; background: #0F172A; display: flex; align-items: center; font: 700 14px/1 Inter, system-ui; color: #fff !important; }
     .nav-cta:hover { background: #1E2A44; }
 
-    /* ── hero ── */
+    /* â”€â”€ hero â”€â”€ */
     .hero { background: #146EF5; position: relative; }
-    .hero-in { padding-top: 88px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
-    .hero-copy { padding-bottom: 96px; }
+    .hero-in { padding-top: 88px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: end; }
+    .hero-copy { padding-bottom: 96px; align-self: center; }
     .hero-badge { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border-radius: 15px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.24); margin-bottom: 26px; }
     .hero-badge .dot { width: 6px; height: 6px; border-radius: 3px; background: #fff; }
     .hero-badge span { font: 600 12px/1 Inter, system-ui; color: #fff; letter-spacing: .02em; }
@@ -53,11 +53,11 @@
     .btn-play .k { font: 500 10px/14px Inter, system-ui; color: rgba(255,255,255,.6); letter-spacing: .06em; text-transform: uppercase; }
     .hero-note { display: flex; align-items: center; gap: 18px; margin-top: 20px; font: 500 14px/20px Inter, system-ui; color: rgba(255,255,255,.7); }
 
-    /* ── phone mockup ── */
+    /* â”€â”€ phone mockup â”€â”€ */
     .hero-phone { display: flex; justify-content: center; align-items: flex-end; height: 700px; overflow: hidden; position: relative; }
     .hero-device { display: block; width: 336px; height: auto; filter: drop-shadow(0 40px 60px rgba(4,32,80,.4)); }
 
-    /* ── sections ── */
+    /* â”€â”€ sections â”€â”€ */
     section { scroll-margin-top: 84px; }
     .sec-pad { padding-top: 96px; padding-bottom: 96px; }
     .kicker { font: 700 12px/1 Inter, system-ui; letter-spacing: .1em; text-transform: uppercase; color: #146EF5; margin-bottom: 16px; }
@@ -185,9 +185,9 @@
     .foot-base { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; gap: 12px; flex-wrap: wrap; }
     .foot-base span { font: 500 13px/1 Inter, system-ui; color: rgba(250,250,250,.4); }
 
-    /* ── responsive ── */
+    /* â”€â”€ responsive â”€â”€ */
     @media (max-width: 960px) {
-      .nav-links > a { display: none; }
+      .nav-links > a:not(.nav-cta) { display: none; }
       .hero-in { grid-template-columns: 1fr; padding-top: 56px; }
       h1 { font-size: 44px; }
       .hero-copy { padding-bottom: 12px; }
@@ -221,17 +221,17 @@
 <section class="hero">
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <div class="hero-badge"><div class="dot"></div><span>iOS · 7 languages</span></div>
+      <div class="hero-badge"><div class="dot"></div><span>iOS Â· 7 languages</span></div>
       <h1>Know what your car actually needs.</h1>
-      <p class="hero-sub">Real manufacturer schedules where they exist — clearly-labeled estimates where they don't. Carrus never dresses a guess up as a fact.</p>
+      <p class="hero-sub">Real manufacturer schedules where they exist â€” clearly-labeled estimates where they don't. Carrus never dresses a guess up as a fact.</p>
       <div class="hero-ctas">
         <a class="btn-appstore" href="https://apps.apple.com/app/id6770422802"><span class="k">Download on the</span><span class="v">App Store</span></a>
         <div class="btn-play" title="Android is in testing"><span class="v">Google Play</span><span class="k">Coming soon</span></div>
       </div>
-      <div class="hero-note">Free for one vehicle · no account required</div>
+      <div class="hero-note">Free for one vehicle Â· no account required</div>
     </div>
     <div class="hero-phone">
-      <img class="hero-device" src="/assets/hero-phone.png" alt="Carrus garage screen on iPhone — three vehicles with health rings and fuel levels" width="720" height="1467">
+      <img class="hero-device" src="/assets/hero-phone.png" alt="Carrus garage screen on iPhone â€” three vehicles with health rings and fuel levels" width="720" height="1467">
     </div>
   </div>
 </section>
@@ -242,8 +242,8 @@
       <div>
         <div class="kicker">The principle</div>
         <h2 style="color:#0F172A">Every interval says where it came from.</h2>
-        <p class="lede">Most trackers invent a schedule and never tell you. Carrus labels every task in the app: the manufacturer's published interval, or an estimate — and which it is, on the row, always.</p>
-        <a class="honesty-link" href="#features">See how it looks in the app →</a>
+        <p class="lede">Most trackers invent a schedule and never tell you. Carrus labels every task in the app: the manufacturer's published interval, or an estimate â€” and which it is, on the row, always.</p>
+        <a class="honesty-link" href="#features">See how it looks in the app â†’</a>
       </div>
       <div class="label-cards">
         <div class="label-card">
@@ -268,7 +268,7 @@
             <div class="proof-ic"><i></i></div>
             <div style="flex:1">
               <div class="proof-t">Oil &amp; filter</div>
-              <div class="proof-s">Manufacturer schedule · every 7,500 mi</div>
+              <div class="proof-s">Manufacturer schedule Â· every 7,500 mi</div>
             </div>
             <span class="pill-red">Overdue</span>
           </div>
@@ -281,7 +281,7 @@
 <section id="features" class="features">
   <div class="wrap sec-pad">
     <h2 style="color:#0F172A">One screen tells you where every car stands.</h2>
-    <p class="lede">Health, fuel, what's late and what it cost — no dashboards to assemble.</p>
+    <p class="lede">Health, fuel, what's late and what it cost â€” no dashboards to assemble.</p>
     <div class="feat-grid">
       <div class="feat-card">
         <div style="display:flex;align-items:center;gap:16px">
@@ -295,7 +295,7 @@
       </div>
       <div class="feat-card">
         <div>
-          <div class="spend-k">Spending · 12 mo</div>
+          <div class="spend-k">Spending Â· 12 mo</div>
           <div class="spend-v">$1,486.20</div>
           <div class="bars"><i style="height:38%"></i><i style="height:62%"></i><i style="height:24%"></i><i style="height:88%"></i><i style="height:46%"></i><i style="height:70%"></i></div>
         </div>
@@ -308,7 +308,7 @@
         <div>
           <div class="gauge-head"><span class="k">Fuel level</span><span class="v">62%</span></div>
           <div class="gauge"><div class="fill"></div><div class="needle"></div><div class="ef"><span>E</span><span>F</span></div></div>
-          <div class="gauge-note">Drag to set · 257 mi est. range</div>
+          <div class="gauge-note">Drag to set Â· 257 mi est. range</div>
         </div>
         <div>
           <div class="feat-t">A gauge you can drag</div>
@@ -324,7 +324,7 @@
     <div>
       <div class="kicker">Carson</div>
       <h2>Describe the noise. Get a straight answer.</h2>
-      <p class="lede">Carson triages like a shop foreman: likely causes, what to check yourself, and how urgent it really is — before you're quoted for it.</p>
+      <p class="lede">Carson triages like a shop foreman: likely causes, what to check yourself, and how urgent it really is â€” before you're quoted for it.</p>
       <div class="chips">
         <span class="chip">Squeal when braking</span>
         <span class="chip">Check engine light</span>
@@ -334,13 +334,13 @@
     <div class="chat">
       <div class="bubble">Squeal when braking, only in the morning</div>
       <div class="chat-h">Most likely causes</div>
-      <div class="chat-p">Surface rust burning off overnight · worn pad wear-indicators · glazed pads.</div>
+      <div class="chat-p">Surface rust burning off overnight Â· worn pad wear-indicators Â· glazed pads.</div>
       <div class="chat-h">Check first</div>
       <div class="chat-p">Does it go away after three or four stops? That's rust, and it's normal. If it stays all day, look at pad thickness through the wheel.</div>
       <div class="chat-h">Urgency</div>
       <div class="urgency"><span class="u-pill">Weeks, not days</span><span class="u-note">Grinding = stop driving</span></div>
       <div class="chat-div"></div>
-      <div class="chat-foot">Carson knows your mileage and history — answers are specific to the car, not the internet.</div>
+      <div class="chat-foot">Carson knows your mileage and history â€” answers are specific to the car, not the internet.</div>
     </div>
   </div>
 </section>
@@ -349,13 +349,13 @@
   <div class="wrap shots-pad">
     <div class="shots-head">
       <h2 style="color:#0F172A">Built for the whole garage</h2>
-      <span>Cars · trucks · bikes · scooters — 12 body types</span>
+      <span>Cars Â· trucks Â· bikes Â· scooters â€” 12 body types</span>
     </div>
     <div class="shots-grid">
-      <div class="shot"><img src="/assets/shots/shot-01.png" alt="Carrus garage screen with vehicle health rings" loading="lazy" width="700" height="1522"></div>
-      <div class="shot"><img src="/assets/shots/shot-02.png" alt="Carrus maintenance schedule with sourced intervals" loading="lazy" width="700" height="1522"></div>
-      <div class="shot"><img src="/assets/shots/shot-03.png" alt="Carson AI mechanic chat" loading="lazy" width="700" height="1522"></div>
-      <div class="shot"><img src="/assets/shots/shot-04.png" alt="Fuel and cost tracking" loading="lazy" width="700" height="1522"></div>
+      <div class="shot"><img src="/assets/shots/shot-01.png" alt="Carrus garage screen with vehicle health rings" loading="lazy" width="700" height="1429"></div>
+      <div class="shot"><img src="/assets/shots/shot-02.png" alt="Carrus maintenance schedule with sourced intervals" loading="lazy" width="700" height="1429"></div>
+      <div class="shot"><img src="/assets/shots/shot-03.png" alt="Carson AI mechanic chat" loading="lazy" width="700" height="1429"></div>
+      <div class="shot"><img src="/assets/shots/shot-04.png" alt="Fuel and cost tracking" loading="lazy" width="700" height="1429"></div>
     </div>
   </div>
 </section>
@@ -368,11 +368,11 @@
       <div class="price-card pc-free">
         <div class="pc-name">Free</div>
         <div class="pc-price">$0</div>
-        <div class="pc-note">One vehicle · forever</div>
+        <div class="pc-note">One vehicle Â· forever</div>
         <div class="pc-list">
           <div class="pc-item"><i></i><span>Full schedule with honesty labels</span></div>
           <div class="pc-item"><i></i><span>Fill-ups, costs, glovebox</span></div>
-          <div class="pc-item muted"><i></i><span>Carson chats · 5 a day</span></div>
+          <div class="pc-item muted"><i></i><span>Carson chats Â· 5 a day</span></div>
         </div>
         <a class="pc-cta" href="https://apps.apple.com/app/id6770422802">Download</a>
       </div>
@@ -382,7 +382,7 @@
           <span class="trial-chip">Free week</span>
         </div>
         <div class="pc-price">$39.99</div>
-        <div class="pc-note">per year · $3.33 a month · save 44%</div>
+        <div class="pc-note">per year Â· $3.33 a month Â· save 44%</div>
         <div class="pc-list">
           <div class="pc-item"><i></i><span>Unlimited vehicles</span></div>
           <div class="pc-item"><i></i><span>Custom tasks &amp; intervals</span></div>
@@ -390,7 +390,7 @@
           <div class="pc-item"><i></i><span>Unlimited glovebox documents</span></div>
         </div>
         <a class="pc-cta" href="https://apps.apple.com/app/id6770422802">Start free week</a>
-        <div class="pc-alt">or $5.99 a month · cancel anytime</div>
+        <div class="pc-alt">or $5.99 a month Â· cancel anytime</div>
       </div>
     </div>
   </div>
@@ -419,18 +419,18 @@
       <div class="foot-col">
         <div class="foot-h">Get it</div>
         <a href="https://apps.apple.com/app/id6770422802">App Store</a>
-        <a href="#pricing">Google Play — soon</a>
+        <a href="#pricing">Google Play â€” soon</a>
       </div>
     </div>
     <div class="locales">
       <span class="loc">English</span>
-      <span class="loc">Español · MX</span>
-      <span class="loc">Español · ES</span>
+      <span class="loc">EspaÃ±ol Â· MX</span>
+      <span class="loc">EspaÃ±ol Â· ES</span>
       <span class="loc">Italiano</span>
-      <span class="loc planned">العربية · planned</span>
+      <span class="loc planned">Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Â· planned</span>
     </div>
     <div class="foot-base">
-      <span>© 2026 Carrus · carrus.app</span>
+      <span>Â© 2026 Carrus Â· carrus.app</span>
       <span>Estimates are labeled. Always.</span>
     </div>
   </div>
