@@ -33,7 +33,7 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="meta"><strong>Effective:</strong> June 5, 2026<br><strong>Last updated:</strong> July 29, 2026</p>
+    <p class="meta"><strong>Effective:</strong> June 5, 2026<br><strong>Last updated:</strong> September 8, 2026</p>
 
     <p>This Privacy Policy describes how Carrus ("we", "our", "the app") handles your information when you use our mobile application.</p>
     <p>Carrus is operated by <strong>Abdulrahman Ahmed Mohamed</strong>, reachable at <a href="mailto:hello@carrus.app">hello@carrus.app</a>.</p>
@@ -62,7 +62,7 @@
     <p><strong>Subscription state:</strong> we keep our own record of your plan (tier, status and expiry date) so that paid features work offline. Payment details are never visible to us.</p>
     <p><strong>Diagnostic data:</strong> crash reports and error events sent to Sentry, tagged with your account ID so we can tell whether one user hit an error repeatedly. Never your email.</p>
     <p><strong>Usage analytics</strong> (pseudonymous): interaction events sent to PostHog (which screens you visit, which features you use), linked to your account ID and your subscription tier. Not your email or name, but not anonymous either — the events for one account can be viewed together.</p>
-    <p><strong>AI features:</strong> when you chat with Carson or scan a receipt, your message text or receipt image is sent to OpenAI to generate a response. OpenAI does not retain this data for training, and we do not store the message content on our servers. We do keep a usage counter — which feature you used and when, with no content — so we can enforce plan limits.</p>
+    <p><strong>AI features:</strong> when you chat with Carson or scan a receipt, your message text or receipt image is sent to OpenAI to generate a response. OpenAI does not retain this data for training, and we do not store your messages or images on our servers. We do keep, for each AI request: which feature you used and when, the AI model used and how many tokens it processed (a size measure, not the content), and a one-way hash of an installation identifier from your device so free allowances cannot be multiplied by creating accounts. To avoid answering the same question twice, Carson's reply to a message is cached on our servers for up to one hour, keyed by an account-scoped hash. If the AI features are misused (see the Terms), we record a flag and may store a pause on the account; you can see these records in Download My Data.</p>
 
     <h2>2. What we do NOT collect</h2>
     <ul>
@@ -107,7 +107,7 @@
       <li><strong>Account data:</strong> kept while your account is active. Deleted within 24 hours of account deletion.</li>
       <li><strong>Analytics + crash reports:</strong> retained by our providers under their own retention settings, currently up to 90 days for event data.</li>
       <li><strong>AI chat + receipt scans:</strong> the message text and images are processed in real time and are not retained on our servers.</li>
-      <li><strong>AI usage counters:</strong> the record of which AI feature you used and when (never the content) is kept while your account is active, and is deleted with your account.</li>
+      <li><strong>AI usage records:</strong> the record of each AI request (feature, time, model, token counts, hashed installation id; never the content), any misuse flags and any AI pause on the account are kept for 90 days, then deleted; the one-hour reply cache is deleted automatically; all of it is deleted with your account.</li>
     </ul>
 
     <h2>8. Security</h2>
